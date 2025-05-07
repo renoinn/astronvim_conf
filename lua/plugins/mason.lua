@@ -11,6 +11,7 @@ return {
         "lua_ls",
         "ts_ls",
         "eslint",
+        "biome",
         "gopls",
         "volar",
         "cssls",
@@ -26,6 +27,7 @@ return {
       ensure_installed = {
         "stylua",
         "prettier",
+        "biome",
         -- add more arguments for adding more null-ls sources
       },
     },
