@@ -24,7 +24,7 @@ return {
       end,
       -- For eslint_d:
       eslint_d = function()
-        require("null-ls").register(require("null-ls").builtins.diagnostics.eslint_d.with {
+        require("null-ls").register(require("none-ls.diagnostics.eslint_d").with {
           condition = function(utils)
             return utils.root_has_file "package.json"
                 or utils.root_has_file ".eslintrc.json"
