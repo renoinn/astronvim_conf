@@ -1,25 +1,35 @@
--- Customize Mason plugins
+-- Customize Mason
 
 ---@type LazySpec
 return {
-  -- use mason-lspconfig to configure LSP installations
+  -- use mason-tool-installer for automatically installing Mason packages
   {
-    "williamboman/mason-lspconfig.nvim",
-    -- overrides `require("mason-lspconfig").setup(...)`
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    -- overrides `require("mason-tool-installer").setup(...)`
     opts = {
+      -- Make sure to use the names found in `:Mason`
       ensure_installed = {
-        "lua_ls",
+        -- install language servers
+        "lua-language-server",
+
+        -- install formatters
+        "stylua",
+
+        -- install debuggers
+        "debugpy",
+
+        -- install any other package
+        "tree-sitter-cli",
+
         "ts_ls",
         "eslint",
         "biome",
         "gopls",
         "volar",
         "cssls",
-        -- add more arguments for adding more language servers
       },
     },
   },
-  -- use mason-null-ls to configure Formatters/Linter installation for null-ls sources
   {
     "jay-babu/mason-null-ls.nvim",
     -- overrides `require("mason-null-ls").setup(...)`
