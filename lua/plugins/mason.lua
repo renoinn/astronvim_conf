@@ -13,20 +13,17 @@ return {
         "lua-language-server",
 
         -- install formatters
-        "stylua",
+        -- "stylua",
 
         -- install debuggers
-        "debugpy",
+        -- "debugpy",
 
         -- install any other package
         "tree-sitter-cli",
 
-        "ts_ls",
-        "eslint",
+        "typescript-language-server",
         "biome",
         "gopls",
-        "volar",
-        "cssls",
       },
     },
   },
@@ -35,7 +32,7 @@ return {
     -- overrides `require("mason-null-ls").setup(...)`
     opts = {
       ensure_installed = {
-        "stylua",
+        -- "stylua",
         "prettier",
         "biome",
         -- add more arguments for adding more null-ls sources
