@@ -34,8 +34,8 @@ return {
           ['K'] = {'<cmd>Lspsaga show_line_diagnostics<cr>'},
           ['J'] = {'<cmd>Lspsaga signature_help<cr>'},
           ['H'] = {'<cmd>Lspsaga preview_definition<cr>'},
-          ['<space>lr'] = {'<cmd>lua vim.lsp.buf.references()<cr>'},
-          ['<space>lm'] = {'<cmd>lua vim.lsp.buf.definition()<cr>'},
+          ['<space>ln'] = {'<cmd>lua Snacks.picker.lsp_references()<cr>'},
+          ['<space>lm'] = {'<cmd>lua Snacks.picker.lsp_definitions()<cr>'},
         }
       },
     },
