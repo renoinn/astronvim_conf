@@ -28,15 +28,13 @@ return {
     opts = {
       mappings = {
         n = {
-          ['<space>la'] = { '<cmd>lua vim.lsp.buf.code_action()<cr>' },
-          ['<space>l.'] = { '<cmd>Lspsaga finder<cr>' },
-          ['<space>r'] = {'<cmd>Lspsaga rename<cr>'},
-          ['K'] = {'<cmd>Lspsaga show_line_diagnostics<cr>'},
-          ['J'] = {'<cmd>Lspsaga signature_help<cr>'},
-          ['H'] = {'<cmd>Lspsaga preview_definition<cr>'},
-          ['<space>ln'] = {'<cmd>lua Snacks.picker.lsp_references()<cr>'},
-          ['<space>lm'] = {'<cmd>lua Snacks.picker.lsp_definitions()<cr>'},
-        }
+          ["<space>l."] = { "<cmd>Lspsaga finder<cr>", desc = "Lspsaga finder" },
+          ["<Leader>lK"] = { "<cmd>Lspsaga show_line_diagnostics<cr>", desc = "Lspsaga diagnostics" },
+          ["<Leader>lH"] = { "<cmd>Lspsaga preview_definition<cr>", desc = "Lspsaga preview_definition" },
+          ["<Leader>ln"] = { function() Snacks.picker.lsp_references() end, desc = "Lsp references" },
+          ["<Leader>lm"] = { function() Snacks.picker.lsp_definitions() end, desc = "Lsp definition" },
+          ["<Leader>li"] = { function() Snacks.picker.lsp_implementations() end, desc = "Lsp definition" },
+        },
       },
     },
   },
